@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Omxr Bot Creator</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    textarea { width: 100%; height: 200px; margin-top: 10px; }
+    input, button { margin: 5px 0; width: 100%; padding: 5px; }
+  </style>
+</head>
+<body>
+  <h1>bot creator</h1>
+
+  <label>Bot Token:</label>
+  <input id="token" type="text" placeholder="Paste your bot token here" />
+
+  <label>Command Name:</label>
+  <input id="cmdName" type="text" placeholder="say, ping, mute..." />
+
+  <label>Command Code (JS only):</label>
+  <textarea id="cmdCode" placeholder="interaction.reply('Hello!');"></textarea>
+
+  <button onclick="generateBot()">Generate Bot Code</button>
+
+  <h3>Generated Code:</h3>
+  <textarea id="output" readonly></textarea>
+
+  <script src="script.js"></script>
+</body>
+</html>
