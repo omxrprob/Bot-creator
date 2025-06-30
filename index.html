@@ -1,30 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Omxr Bot Creator</title>
-  <style>
-    body { font-family: sans-serif; padding: 20px; }
-    textarea { width: 100%; height: 200px; margin-top: 10px; }
-    input, button { margin: 5px 0; width: 100%; padding: 5px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Creator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-  <h1>bot creator</h1>
-
-  <label>Bot Token:</label>
-  <input id="token" type="text" placeholder="Paste your bot token here" />
-
-  <label>Command Name:</label>
-  <input id="cmdName" type="text" placeholder="say, ping, mute..." />
-
-  <label>Command Code (JS only):</label>
-  <textarea id="cmdCode" placeholder="interaction.reply('Hello!');"></textarea>
-
-  <button onclick="generateBot()">Generate Bot Code</button>
-
-  <h3>Generated Code:</h3>
-  <textarea id="output" readonly></textarea>
-
-  <script src="script.js"></script>
+    <div id="app-container">
+        <aside id="sidebar">
+            <h1>My Agents</h1>
+            <div id="search-container">
+                <input type="search" id="search-public-bots" placeholder="Search for public agents...">
+            </div>
+            <div id="agent-list-container">
+                <ul id="agent-list"></ul>
+            </div>
+            <button id="create-agent-btn">
+                <img src="plus-icon.png" alt="New Agent" class="btn-icon">
+                Create New Agent
+            </button>
+        </aside>
+        <main id="main-content">
+            <!-- Content will be dynamically injected here -->
+        </main>
+    </div>
+    <script src="script.js" type="module"></script>
 </body>
 </html>
